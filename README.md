@@ -1,8 +1,5 @@
 # TempConverterGem
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/temp_converter_gem`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+**temp_converter_gem** it's just a basic gem that converts temperatures! 🌡️
 
 ## Installation
 
@@ -15,15 +12,27 @@ If bundler is not being used to manage dependencies, install the gem by executin
     $ gem install temp_converter_gem
 
 ## Usage
+```ruby
+# accepted scales -> :kelvin, :celsius, :fahrenheit
 
-TODO: Write usage instructions here
+require 'temp_converter_gem'
 
-## Development
+# Convert 68 degrees Fahrenheit to Celsius
+celsius = TempConverterGem::Convert.to_celsius(:fahrenheit, 68)
+puts "68 degrees Fahrenheit is #{celsius} degrees Celsius"
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+# Convert 20 degrees Celsius to Fahrenheit
+fahrenheit = TempConverterGem::Convert.to_fahrenheit(:celsius, 20)
+puts "20 degrees Celsius is #{fahrenheit} degrees Fahrenheit"
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+# Convert 0 degrees Celsius to Kelvin
+kelvin = TempConverterGem::Convert.to_kelvin(:celsius, 0)
+puts "0 degrees Celsius is #{kelvin} Kelvin"
+
+
+
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/temp_converter_gem.
+Bug reports and pull requests are welcome on GitHub at https://github.com/MatusSN/temp_converter_gem
