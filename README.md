@@ -1,5 +1,5 @@
 # TempConverterGem
-**temp_converter_gem** it's just a basic gem that converts temperatures! 🌡️
+**THIS GEM WILL NOT RECEIVE FUTURE UPDATES.**
 
 ## Installation
 
